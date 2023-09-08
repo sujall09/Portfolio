@@ -6,12 +6,11 @@
     margin: 0;
 }
 
-body {
-    background-image: url("background\ img.jpg");
+.container {
+    background-image: url("images/background\ img.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
-    /* color: white; */
 }
 
 .heading {
@@ -30,15 +29,12 @@ body {
 nav {
     display: flex;
     justify-content: space-evenly;
-    /* cursor: pointer; */
 }
 
 .navbar {
     display: flex;
-    position: fixed;
     color: rgb(255, 255, 237);
     font-family: 'Poppins', sans-serif;
-
 }
 
 .tabs ul {
@@ -57,20 +53,79 @@ nav {
     padding-left: 35px;
 }
 
-main {
-    margin: 193px 200px;
+section {
+    height: 100vh;
+}
+
+section.sec2 {
+    background-color: #fbf4e0;
+}
+
+.sec1 h1 {
+    padding: 0px 50px;
+}
+
+.sec1 {
+    margin: 100px 200px;
     height: 50vh;
     width: 75vw;
     font-family: 'Roboto', sans-serif;
     color: rgb(231, 231, 161);
 }
 
-.container h1 {
-    padding: 0px 50px;
-}
-
 .intro {
     padding: 45px 50px;
     font-size: 17px;
     line-height: 25px;
+}
+
+.sec2 h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 80px;
+    padding: 50px 0;
+    font-family: 'Poppins', sans-serif;
+    color: #695439;
+}
+
+.sec2 h1:hover {
+    text-shadow: rgb(231, 231, 161);
+}
+
+.project {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* .calculator img {
+    height: 40vh;
+    width: 30vw;
+}
+
+.snake img {
+    height: 40vh;
+    width: 30vw;
+}
+
+.tictactoe img {
+    height: 40vh;
+    width: 30vw;
+} */
+
+.snake video {
+    object-fit: cover;
+    height: 40vh;
+    width: 30vw;
+}
+
+.calculator video {
+    object-fit: cover;
+    height: 40vh;
+    width: 30vw;
+}
+
+.tictactoe video {
+    object-fit: cover;
+    height: 40vh;
+    width: 30vw;
 }
