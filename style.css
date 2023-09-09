@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Assistant&family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
 
 * {
     padding: 0;
@@ -59,6 +60,7 @@ section {
 
 section.sec2 {
     background-color: #fbf4e0;
+    font-family: 'PT Serif', serif;
 }
 
 .sec1 h1 {
@@ -82,14 +84,10 @@ section.sec2 {
 .sec2 h1 {
     display: flex;
     justify-content: center;
-    font-size: 80px;
-    padding: 50px 0;
+    font-size: 70px;
+    padding: 30px 0;
     font-family: 'Poppins', sans-serif;
     color: #695439;
-}
-
-.sec2 h1:hover {
-    text-shadow: rgb(231, 231, 161);
 }
 
 .project {
@@ -97,35 +95,84 @@ section.sec2 {
     justify-content: space-evenly;
 }
 
-/* .calculator img {
-    height: 40vh;
-    width: 30vw;
+.snake {
+    margin-left: 20px;
 }
 
-.snake img {
-    height: 40vh;
-    width: 30vw;
+.info h2 {
+    color: #601a3e;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    padding: 5px;
 }
 
-.tictactoe img {
-    height: 40vh;
-    width: 30vw;
-} */
+a {
+    text-decoration: none;
+}
+
+.info p {
+    color: rgb(139, 128, 0);
+    font-size: 17px;
+    padding: 0 5px;
+}
 
 .snake video {
     object-fit: cover;
-    height: 40vh;
+    /* height: 40vh; */
     width: 30vw;
+    cursor: pointer;
 }
 
 .calculator video {
     object-fit: cover;
-    height: 40vh;
+    /* height: 40vh; */
     width: 30vw;
+    cursor: pointer;
 }
 
 .tictactoe video {
     object-fit: cover;
-    height: 40vh;
+    /* height: 40vh; */
     width: 30vw;
+    cursor: pointer;
+}
+
+section.sec3 {
+    background-color: #77ecf2;
+    height: 65vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+.sec3 h1 {
+    padding: 40px 110px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder
+}
+
+#introContact {
+    padding: 0px 110px;
+    font-size: 20px;
+}
+
+.add {
+    padding: 20px 110px;
+}
+
+.num {
+    padding: 5px 110px;
+}
+
+.mail {
+    padding: 15px 110px;
+}
+
+.icons {
+    padding: 10px 110px;
+    width: 8vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon {
+    color: black;
 }
