@@ -1,3 +1,4 @@
+/* Basic */
 @import url('https://fonts.googleapis.com/css2?family=Assistant&family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
@@ -7,18 +8,17 @@
     margin: 0;
 }
 
-.container {
-    background-image: url("images/background\ img.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
+html {
+    scroll-behavior: smooth;
 }
 
+/* navigation bar */
 .heading {
     margin: 30px 200px;
     font-weight: 600;
     line-height: 0.9;
     cursor: pointer;
+    width: 25vw;
 }
 
 #heading2 {
@@ -36,49 +36,53 @@ nav {
     display: flex;
     color: rgb(255, 255, 237);
     font-family: 'Poppins', sans-serif;
+    position: fixed;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.tabs ul {
+.navigating {
     display: flex;
-    margin: 30px 150px;
+    justify-content: space-between;
+    width: 20vw;
+    display: flex;
+    padding: 30px 150px;
     list-style: none;
     font-weight: 600;
+}
+
+.navigating a {
+    color: rgb(255, 255, 237);
     cursor: pointer;
 }
 
-#home {
-    padding-right: 35px;
-}
-
-#contact {
-    padding-left: 35px;
-}
-
-section {
+/* home */
+main section {
     height: 100vh;
 }
 
-section.sec2 {
-    background-color: #fbf4e0;
-    font-family: 'PT Serif', serif;
-}
-
-.sec1 h1 {
-    padding: 0px 50px;
-}
-
 .sec1 {
-    margin: 100px 200px;
-    height: 50vh;
-    width: 75vw;
+    background-image: url("images/background\ img.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     font-family: 'Roboto', sans-serif;
     color: rgb(231, 231, 161);
 }
 
+.contain {
+    padding: 210px 220px;
+}
+
 .intro {
-    padding: 45px 50px;
-    font-size: 17px;
+    font-size: 18px;
     line-height: 25px;
+    padding-top: 50px;
+}
+
+/* projects */
+section.sec2 {
+    background-color: #fbf4e0;
+    font-family: 'PT Serif', serif;
 }
 
 .sec2 h1 {
@@ -118,25 +122,23 @@ a {
 
 .snake video {
     object-fit: cover;
-    /* height: 40vh; */
     width: 30vw;
     cursor: pointer;
 }
 
 .calculator video {
     object-fit: cover;
-    /* height: 40vh; */
     width: 30vw;
     cursor: pointer;
 }
 
 .tictactoe video {
     object-fit: cover;
-    /* height: 40vh; */
     width: 30vw;
     cursor: pointer;
 }
 
+/* contact */
 section.sec3 {
     background-color: #77ecf2;
     height: 65vh;
@@ -175,4 +177,36 @@ section.sec3 {
 
 .icon {
     color: black;
+}
+
+/* animation */
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translate(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+.videos:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.videos:nth-child(3) {
+    transition-delay: 400ms;
+}
+
+.videos:nth-child(4) {
+    transition-delay: 600ms;
 }

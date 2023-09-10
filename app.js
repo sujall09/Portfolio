@@ -1,3 +1,11 @@
+// reloading same page using h1
+const reloading = document.querySelector("#head")
+
+reloading.addEventListener("click", () => {
+    window.location.reload();
+});
+
+// playing & pausing video on mouseover
 const videos = document.querySelectorAll(".videos");
 for (let i = 0; i < videos.length; i++) {
     videos[i].addEventListener("mouseenter", function (e) {
@@ -8,14 +16,19 @@ for (let i = 0; i < videos.length; i++) {
     })
 }
 
-// const snakeInfo = document.getElementById("snakeInfo")
+// Animation
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry);
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        } else {
+            entry.target.classList.remove("show");
+        }
+    })
+})
 
-// videos[0].addEventListener("mouseenter", function (e) {
-//     snakeInfo.style.display = "block";
-//     console.log("Hello")
-// })
-// videos[0].addEventListener("mouseout", function (e) {
-//     snakeInfo.style.display = "none";
-//     console.log("Hello")
-// })
-
+const hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach((el) => {
+    observer.observe(el);
+})
